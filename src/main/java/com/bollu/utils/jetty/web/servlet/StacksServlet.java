@@ -1,4 +1,4 @@
-package com.bollu.utils.jetty.web;
+package com.bollu.utils.jetty.web.servlet;
 
 import com.bollu.utils.common.ThreadUtils;
 import org.slf4j.Logger;

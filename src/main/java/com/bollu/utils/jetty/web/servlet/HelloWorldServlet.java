@@ -1,4 +1,4 @@
-package com.bollu.utils.jetty.web;
+package com.bollu.utils.jetty.web.servlet;
 
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;

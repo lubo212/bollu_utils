@@ -1,5 +1,6 @@
 package com.bollu.utils.jetty.web;
 
+import com.bollu.utils.jetty.web.servlet.StacksServlet;
 import com.google.common.base.Preconditions;
 import org.eclipse.jetty.server.Connector;
 import org.eclipse.jetty.server.Handler;
@@ -15,7 +16,6 @@ import org.slf4j.LoggerFactory;
 
 import javax.annotation.concurrent.NotThreadSafe;
 import java.io.IOException;
-import java.net.InetAddress;
 import java.net.InetSocketAddress;
 
 /**
