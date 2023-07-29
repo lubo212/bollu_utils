@@ -1,4 +1,6 @@
-package com.bollu.goosefs.grpc.network;
+package com.bollu.goosefs.network;
+
+import com.bollu.goosefs.network.grpc.GrpcService;
 
 import java.io.IOException;
 import java.util.Map;
@@ -10,7 +12,7 @@ public interface Server<T> {
 
   String getName();
 
-//  Map<ServiceType, GrpcService> getServices();
+  Map<ServiceType, GrpcService> getServices();
 
   void start(T options) throws IOException;
 

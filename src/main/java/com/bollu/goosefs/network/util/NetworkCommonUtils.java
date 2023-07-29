@@ -1,9 +1,8 @@
-package com.bollu.goosefs.grpc.network.util;
+package com.bollu.goosefs.network.util;
 
 import com.bollu.goosefs.common.utils.NetworkAddressUtils;
 import com.bollu.goosefs.config.Configuration;
 import com.bollu.goosefs.config.PropertyKey;
-import com.bollu.goosefs.grpc.network.ServiceType;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;

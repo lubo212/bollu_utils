@@ -1,6 +1,6 @@
-package com.bollu.goosefs.grpc.network;
+package com.bollu.goosefs.network.master;
 
-import com.bollu.goosefs.grpc.network.util.NetworkCommonUtils;
+import com.bollu.goosefs.network.util.NetworkCommonUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

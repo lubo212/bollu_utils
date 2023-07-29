@@ -1,6 +1,6 @@
-package com.bollu.goosefs.grpc.network.grpc;
+package com.bollu.goosefs.network.grpc;
 
-import com.bollu.goosefs.grpc.network.grpc.authentication.AuthenticationServer;
+import com.bollu.goosefs.network.grpc.authentication.AuthenticationServer;
 import com.bollu.goosefs.retry.ExponentialBackoffRetry;
 import com.bollu.goosefs.retry.RetryUtils;
 import com.google.common.base.MoreObjects;
@@ -16,23 +16,16 @@ public class GrpcServer {
   private static final Logger LOG = LoggerFactory.getLogger(GrpcServer.class);
 
   private final Server mServer;
-  private final AuthenticationServer mAuthServer;
   private final Closer mCloser;
   private boolean mStarted = false;
   private final long mServerShutdownTimeoutMs;
 
-
   //todo 为什么closer要在GrpcServer里进行关闭
-  public GrpcServer(Server server, AuthenticationServer authServer, Closer closer,
+  public GrpcServer(Server server,  Closer closer,
                     long serverShutdownTimeoutMs) {
     mServer = server;
-    mAuthServer = authServer;
     mCloser = closer;
     mServerShutdownTimeoutMs = serverShutdownTimeoutMs;
-  }
-
-  public AuthenticationServer getAuthenticationServer() {
-    return mAuthServer;
   }
 
   public GrpcServer start() throws IOException {
@@ -84,7 +77,6 @@ public class GrpcServer {
   public String toString() {
     return MoreObjects.toStringHelper(this)
         .add("InternalServer", mServer)
-        .add("AuthServerType", mAuthServer.getClass().getSimpleName())
         .toString();
   }
 }

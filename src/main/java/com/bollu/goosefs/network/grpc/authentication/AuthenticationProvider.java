@@ -1,4 +1,4 @@
-package com.bollu.goosefs.grpc.network.grpc.authentication;
+package com.bollu.goosefs.network.grpc.authentication;
 
 import javax.security.sasl.AuthenticationException;
 

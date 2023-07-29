@@ -1,9 +1,9 @@
-package com.bollu.goosefs.grpc.network.process;
+package com.bollu.goosefs.network.master.process;
 
 import com.bollu.goosefs.common.utils.NetworkAddressUtils;
 import com.bollu.goosefs.config.InstancedConfiguration;
-import com.bollu.goosefs.grpc.network.ServiceType;
-import com.bollu.goosefs.grpc.network.util.NetworkCommonUtils;
+import com.bollu.goosefs.network.ServiceType;
+import com.bollu.goosefs.network.util.NetworkCommonUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

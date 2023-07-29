@@ -1,4 +1,4 @@
-package com.bollu.goosefs.grpc.network.process;
+package com.bollu.goosefs.network.master.process;
 
 public interface Process {
   void start() throws Exception;

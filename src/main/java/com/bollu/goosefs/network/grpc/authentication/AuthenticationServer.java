@@ -1,4 +1,4 @@
-package com.bollu.goosefs.grpc.network.grpc.authentication;
+package com.bollu.goosefs.network.grpc.authentication;
 
 import com.bollu.goosefs.common.exception.status.UnauthenticatedException;
 import com.qcloud.cos.goosefs.grpc.ChannelAuthenticationScheme;

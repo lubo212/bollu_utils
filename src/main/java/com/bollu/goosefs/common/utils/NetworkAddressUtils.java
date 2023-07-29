@@ -2,7 +2,7 @@ package com.bollu.goosefs.common.utils;
 
 import com.bollu.goosefs.config.Configuration;
 import com.bollu.goosefs.config.PropertyKey;
-import com.bollu.goosefs.grpc.network.ServiceType;
+import com.bollu.goosefs.network.ServiceType;
 import com.google.common.base.Preconditions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

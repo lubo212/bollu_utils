@@ -1,4 +1,4 @@
-package com.bollu.goosefs.grpc.network;
+package com.bollu.goosefs.network;
 
 import com.bollu.goosefs.config.PropertyKey;
 

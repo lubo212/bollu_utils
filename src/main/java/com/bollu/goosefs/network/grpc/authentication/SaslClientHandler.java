@@ -1,4 +1,4 @@
-package com.bollu.goosefs.grpc.network.grpc.authentication;
+package com.bollu.goosefs.network.grpc.authentication;
 
 import com.qcloud.cos.goosefs.grpc.SaslMessage;
 
