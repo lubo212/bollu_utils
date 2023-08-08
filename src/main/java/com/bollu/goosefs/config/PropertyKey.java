@@ -9,6 +9,7 @@ import com.google.common.base.Strings;
 import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
 import com.google.common.collect.Sets;
+import io.netty.util.ResourceLeakDetector;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -269,6 +270,27 @@ public final class PropertyKey implements Comparable<PropertyKey> {
           .setConsistencyCheckLevel(ConsistencyCheckLevel.WARN)
           .setScope(Scope.ALL)
           .build();
+
+  public static final PropertyKey LEAK_DETECTOR_LEVEL =
+      new Builder(Name.LEAK_DETECTOR_LEVEL)
+          .setDefaultValue(ResourceLeakDetector.Level.DISABLED)
+          .setDescription("Set this to one of {DISABLED, SIMPLE, ADVANCED, PARANOID} to track "
+              + "resource leaks in the Alluxio codebase. DISABLED does not track any leaks. "
+              + "SIMPLE only samples resources, and doesn't track recent accesses, having a low "
+              + "overhead. ADVANCED is like simple, but tracks recent object accesses and has "
+              + "higher overhead. PARANOID tracks all objects and has the highest overhead. "
+              + "It is recommended to only use this value during testing.")
+          .setConsistencyCheckLevel(ConsistencyCheckLevel.IGNORE)
+          .setScope(Scope.ALL)
+          .build();
+  public static final PropertyKey LEAK_DETECTOR_EXIT_ON_LEAK =
+      new Builder(Name.LEAK_DETECTOR_EXIT_ON_LEAK)
+          .setDefaultValue(false)
+          .setDescription("If set to true, the JVM will exit as soon as a leak is detected. Use "
+              + "only in testing environments.")
+          .setConsistencyCheckLevel(ConsistencyCheckLevel.IGNORE)
+          .setScope(Scope.ALL)
+          .build();
   public static final PropertyKey USER_HOSTNAME = new Builder(Name.USER_HOSTNAME)
       .setDescription("The hostname to use for an GooseFS client.")
       .setConsistencyCheckLevel(ConsistencyCheckLevel.WARN)
@@ -339,6 +361,9 @@ public final class PropertyKey implements Comparable<PropertyKey> {
     public static final String MASTER_BIND_HOST = "goosefs.master.bind.host";
     public static final String MASTER_RPC_PORT = "goosefs.master.rpc.port";
     public static final String MASTER_EMBEDDED_JOURNAL_PORT = "goosefs.master.embedded.journal.port";
+    public static final String LEAK_DETECTOR_LEVEL = "alluxio.leak.detector.level";
+
+    public static final String LEAK_DETECTOR_EXIT_ON_LEAK = "alluxio.leak.detector.exit.on.leak";
 
     private Name() {
     } // prevent instantiation
