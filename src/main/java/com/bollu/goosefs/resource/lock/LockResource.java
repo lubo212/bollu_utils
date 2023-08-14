@@ -1,5 +1,6 @@
-package com.bollu.goosefs.resource;
+package com.bollu.goosefs.resource.lock;
 
+import com.bollu.goosefs.resource.CustomResourceLeakDetectorFactory;
 import com.google.common.annotations.VisibleForTesting;
 import io.netty.util.ResourceLeakDetector;
 import io.netty.util.ResourceLeakTracker;

@@ -1,6 +1,6 @@
 package com.bollu.goosefs.resource.resourcepool;
 
-import com.bollu.goosefs.resource.LockResource;
+import com.bollu.goosefs.resource.lock.LockResource;
 import com.google.common.base.Preconditions;
 
 import javax.annotation.Nullable;

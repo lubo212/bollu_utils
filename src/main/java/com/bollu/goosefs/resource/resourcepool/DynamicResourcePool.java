@@ -2,7 +2,7 @@ package com.bollu.goosefs.resource.resourcepool;
 
 import com.bollu.goosefs.common.constant.Constants;
 import com.bollu.goosefs.common.utils.ThreadFactoryUtils;
-import com.bollu.goosefs.resource.LockResource;
+import com.bollu.goosefs.resource.lock.LockResource;
 import com.bollu.goosefs.time.SystemClock;
 import com.codahale.metrics.Counter;
 import com.google.common.base.Preconditions;
